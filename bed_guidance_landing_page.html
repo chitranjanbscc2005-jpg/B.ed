@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.Ed Guidance | CareerLead.in</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f8fbff 0%, #eef7ff 45%, #f6fff8 100%);
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 22px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f172a, #1d4ed8 55%, #16a34a);
+      color: #fff;
+      border-radius: 30px;
+      padding: 56px 28px 42px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      top: -60px;
+      right: -60px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      bottom: -70px;
+      left: -50px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(6px);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .subtext {
+      font-size: 18px;
+      max-width: 820px;
+      margin: 0 auto 26px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .hero-points span {
+      background: rgba(255,255,255,0.13);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .cta-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cta-btn, .secondary-btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 16px 28px;
+      border-radius: 14px;
+      font-size: 17px;
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .cta-btn {
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 10px 22px rgba(37, 211, 102, 0.3);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      background: #1ebe5d;
+    }
+
+    .secondary-btn {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .secondary-btn:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.18);
+    }
+
+    .section {
+      background: #fff;
+      margin-top: 24px;
+      padding: 30px 24px;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+    }
+
+    .section-title {
+      font-size: 28px;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      color: #64748b;
+      margin-bottom: 22px;
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.03);
+    }
+
+    .card h3 {
+      font-size: 18px;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #475569;
+      font-size: 15px;
+    }
+
+    .danger {
+      border-top: 4px solid #f97316;
+      background: #fff7ed;
+    }
+
+    .safe {
+      border-top: 4px solid #16a34a;
+      background: #f0fdf4;
+    }
+
+    .blue {
+      border-top: 4px solid #2563eb;
+    }
+
+    .compare {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .compare-box {
+      border-radius: 20px;
+      padding: 22px;
+      color: #fff;
+    }
+
+    .bihar {
+      background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    }
+
+    .up {
+      background: linear-gradient(135deg, #15803d, #166534);
+    }
+
+    .compare-box h3 {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .compare-box ul {
+      padding-left: 18px;
+    }
+
+    .compare-box li {
+      margin-bottom: 10px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 16px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .step-number {
+      min-width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #1d4ed8;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .step strong {
+      color: #0f172a;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #fff7ed, #fffbeb);
+      border: 1px solid #fed7aa;
+      border-radius: 20px;
+      padding: 22px;
+      margin-top: 18px;
+    }
+
+    .highlight-box p {
+      margin-bottom: 10px;
+      color: #7c2d12;
+    }
+
+    .service-banner {
+      background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+      border: 1px solid #bfdbfe;
+      border-radius: 22px;
+      padding: 24px;
+      margin-top: 18px;
+    }
+
+    .service-banner h3 {
+      font-size: 24px;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+
+    .footer-cta {
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a, #111827);
+      color: #fff;
+      padding: 34px 22px;
+      border-radius: 26px;
+      margin: 28px 0 42px;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.18);
+    }
+
+    .footer-cta h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .footer-cta p {
+      color: #cbd5e1;
+      margin-bottom: 14px;
+    }
+
+    .number {
+      font-size: 28px;
+      font-weight: 800;
+      color: #25d366;
+      margin-bottom: 18px;
+    }
+
+    .mini-note {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 31px;
+      }
+
+      .subtext {
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .cta-btn, .secondary-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="brand">CareerLead.in | Empowering Futures</div>
+        <h1>B.Ed करना है, लेकिन Bihar या UP को लेकर Confused हैं?</h1>
+        <p class="subtext">
+          सही guidance के बिना B.Ed admission लेना future के लिए risky हो सकता है।  
+          हम आपको verified college, approval check, सही option selection और career roadmap में मदद करते हैं।
+        </p>
+
+        <div class="hero-points">
+          <span>Verified Guidance</span>
+          <span>NCTE Check Support</span>
+          <span>Bihar + UP Options</span>
+          <span>Direct WhatsApp Inquiry</span>
+        </div>
+
+        <div class="cta-wrap">
+          <a class="cta-btn" href="https://wa.me/919798686973?text=Namaste%2C%20mujhe%20B.Ed%20Guidance%20chahiye." target="_blank">अभी WhatsApp करें</a>
+          <a class="secondary-btn" href="#details">पूरी जानकारी देखें</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="details">
+      <h2 class="section-title">Bihar के ज़्यादातर छात्र UP से B.Ed क्यों करते हैं?</h2>
+      <p class="section-subtitle">यह सिर्फ एक trend नहीं है, इसके पीछे practical reasons और market reality दोनों हैं।</p>
+      <div class="grid">
+        <div class="card blue">
+          <h3>सीट कम, competition ज्यादा</h3>
+          <p>Bihar में B.Ed seats limited होने की वजह से बहुत students को admission नहीं मिल पाता, इसलिए वे दूसरे state के options ढूंढते हैं।</p>
+        </div>
+        <div class="card blue">
+          <h3>UP में options ज्यादा</h3>
+          <p>UP में private colleges की संख्या ज्यादा होने से students को कई options मिल जाते हैं और admission comparatively आसान लगता है।</p>
+        </div>
+        <div class="card blue">
+          <h3>Fast admission process</h3>
+          <p>बहुत students year gap से बचने के लिए ऐसे colleges prefer करते हैं जहाँ admission जल्दी हो जाए।</p>
+        </div>
+        <div class="card blue">
+          <h3>Consultant network strong</h3>
+          <p>Bihar में UP colleges के agents और consultants काफी active रहते हैं, इसलिए students तक information तेजी से पहुँचती है।</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Bihar vs UP: Student perspective</h2>
+      <p class="section-subtitle">हर student का choice alag hota hai, lekin decision facts aur verification ke base par hi hona chahiye.</p>
+      <div class="compare">
+        <div class="compare-box bihar">
+          <h3>Bihar से B.Ed</h3>
+          <ul>
+            <li>Competition ज़्यादा हो सकता है</li>
+            <li>Seats comparatively limited हो सकती हैं</li>
+            <li>Local familiarity का advantage मिलता है</li>
+            <li>कुछ students के लिए cost manageable हो सकती है</li>
+          </ul>
+        </div>
+        <div class="compare-box up">
+          <h3>UP से B.Ed</h3>
+          <ul>
+            <li>Private colleges के options ज्यादा मिलते हैं</li>
+            <li>Admission जल्दी होने के chances बढ़ जाते हैं</li>
+            <li>Budget range में variety मिल सकती है</li>
+            <li>लेकिन हर college safe या quality वाला नहीं होता</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">सबसे बड़ा risk क्या है?</h2>
+      <p class="section-subtitle">गलती UP या Bihar चुनने में नहीं, गलत college चुनने में होती है।</p>
+      <div class="grid">
+        <div class="card danger">
+          <h3>Approval check न करना</h3>
+          <p>बहुत students बिना proper verification के admission ले लेते हैं, जिससे बाद में degree validation या career issues सामने आ सकते हैं।</p>
+        </div>
+        <div class="card danger">
+          <h3>सिर्फ agent की बात पर भरोसा</h3>
+          <p>हर जानकारी सही नहीं होती। Student को खुद भी college approval, affiliation और academic process समझना चाहिए।</p>
+        </div>
+        <div class="card danger">
+          <h3>Attendance / practical clarity न होना</h3>
+          <p>Admission से पहले class, practical, internship और exam system clear होना बहुत जरूरी है।</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <p><strong>सच याद रखें:</strong> सिर्फ B.Ed करना काफी नहीं है, सही college से B.Ed करना जरूरी है।</p>
+        <p>गलत decision आपके time, money और future तीनों को affect कर सकता है।</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Admission से पहले क्या check करें?</h2>
+      <p class="section-subtitle">किसी भी B.Ed college में admission लेने से पहले ये verification points जरूर देखें:</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div>
+            <strong>NCTE Approval</strong>
+            B.Ed course के लिए यह सबसे important approval है। सबसे पहले यही verify करें।
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div>
+            <strong>University Affiliation / Recognition</strong>
+            College किस university से affiliated है और उसकी recognition valid है या नहीं, यह जरूर check करें।
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div>
+            <strong>NAAC / Academic Quality</strong>
+            College की overall quality, faculty, environment, internship support और learning standard को देखें।
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div>
+            <strong>Attendance, Practical, Internship</strong>
+            Practical exposure और attendance requirement पहले से clear होनी चाहिए।
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <div>
+            <strong>Career Scope After B.Ed</strong>
+            B.Ed के बाद CTET, STET, private school teaching और आगे की opportunities की clarity होनी चाहिए।
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">CareerLead.in आपकी कैसे मदद कर सकता है?</h2>
+      <p class="section-subtitle">हमारा focus सिर्फ admission नहीं, बल्कि सही और verified admission guidance देना है।</p>
+      <div class="grid">
+        <div class="card safe">
+          <h3>Verified College Guidance</h3>
+          <p>Bihar और UP दोनों के अच्छे और practical options आपकी profile के हिसाब से समझाए जाते हैं।</p>
+        </div>
+        <div class="card safe">
+          <h3>Approval Verification Support</h3>
+          <p>कौन सा college genuine है, कौन सा risky हो सकता है — इस पर proper guidance दी जाती है।</p>
+        </div>
+        <div class="card safe">
+          <h3>Budget + Option Clarity</h3>
+          <p>आपके budget, location preference और career goal के according सही direction suggest की जाती है।</p>
+        </div>
+        <div class="card safe">
+          <h3>Career Roadmap</h3>
+          <p>B.Ed के बाद CTET, STET, teaching line aur आगे की planning भी समझाई जाती है।</p>
+        </div>
+      </div>
+
+      <div class="service-banner">
+        <h3>हमारा approach क्या है?</h3>
+        <p>हम सिर्फ admission push नहीं करते। हमारा aim है कि student को सही जानकारी, सही verification और सही decision support मिले — ताकि future में regret न हो।</p>
+      </div>
+    </section>
+
+    <section class="footer-cta">
+      <h2>सही B.Ed Guidance अभी पाएं</h2>
+      <p>अगर आप B.Ed admission को लेकर serious हैं, तो बिना verification के कोई फैसला न लें।</p>
+      <div class="number">+91 9798686973</div>
+      <a class="cta-btn" href="https://wa.me/919798686973?text=Namaste%2C%20mujhe%20B.Ed%20Admission%20Guidance%20chahiye." target="_blank">WhatsApp पर Inquiry करें</a>
+      <div class="mini-note">Message लिखें: <strong>“B.Ed Guidance”</strong></div>
+    </section>
+  </div>
+</body>
+</html>
